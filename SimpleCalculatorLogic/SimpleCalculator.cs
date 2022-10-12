@@ -1,6 +1,6 @@
 ﻿namespace SimpleCalculatorLogic;
 
-public class SimpleCalculatorLogic
+public class SimpleCalculator
 {
     public static double AddNumbers(double num1, double num2)
     {
