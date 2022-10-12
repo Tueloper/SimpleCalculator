@@ -7,13 +7,36 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleCalculatorAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class SimpleCalculatorController : ControllerBase
     {
+        [HttpPost]
+        public double Add(double num1, double num2)
+        {
+            double result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(num1, num2);
 
-        [HttpGet]
-        public double Division(double num1, double num2)
+            return Math.Round(result, 2);
+        }
+
+        [HttpPost]
+        public double Substract(double num1, double num2)
+        {
+            double result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(num1, num2);
+
+            return Math.Round(result, 2);
+        }
+
+        [HttpPost]
+        public double Multiply(double num1, double num2)
+        {
+            double result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(num1, num2);
+
+            return Math.Round(result, 2);
+        }
+
+        [HttpPost]
+        public double Divide(double num1, double num2)
         {
             double result = 0;
 
@@ -26,7 +49,7 @@ namespace SimpleCalculatorAPI.Controllers
                 Response.StatusCode = 400;
             }
 
-            return result;
+            return Math.Round(result, 2);
         }
     }
 }
