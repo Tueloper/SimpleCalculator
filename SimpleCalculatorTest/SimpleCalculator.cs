@@ -178,4 +178,93 @@ public class SimpleCalculator
         Assert.AreEqual(1.0, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
+
+
+
+    //.....................................................................................
+    //This are Multiplication logic tests
+    //.....................................................................................
+
+    [TestMethod]
+    public void Multiply_Two_Positive_Whole_Number_Correctly_And_Return_A_Positive_Double()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(3, 2);
+        Assert.AreEqual(6, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+    [TestMethod]
+    public void Multiply_One_Number_And_Variable_To_Get_An_Negative_Number_Since_Variable_Defaults_To_Zero()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(ed, 32);
+        Assert.AreEqual(0, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+    [TestMethod]
+    public void Multiply_Two_Negative_Whole_Numbers_Correctly_And_Return_A_Negative_Nubmber()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(-2, -2);
+        Assert.AreEqual(4, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+    [TestMethod]
+    public void Multiply_One_Positive_And_Negative_Correctly_And_Return_A_Positive_Double()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(2, -4);
+        Assert.AreEqual(-8, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+    [TestMethod]
+    public void Multiply_One_Positive_Decimal_And_Positive_Whole_Number_Correctly_And_Return_A_Negative()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(2.4, 2);
+        Assert.AreEqual(4.8, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+
+    [TestMethod]
+    public void Multiply_One_Positive_Decimal_And_Negative_Whole_Number_Correctly_And_Return_A_Double()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(5.5, -3);
+        Assert.AreEqual(-16.5, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+
+    [TestMethod]
+    public void Multiply_Two_Zero_Numbers_And_Return_A_Zero()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(0, 0);
+        Assert.AreEqual(0, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+
+    [TestMethod]
+    public void Multiply_Two_Negative_Decimal_Numbers_Correctly_And_Return_Positive()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(-2.2, -4.2);
+        Assert.AreEqual(9.24, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+    [TestMethod]
+    public void Multiply_One_Positive_And_Zero_Correctly_And_Return_A_Negative_Double()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(0, 5);
+        Assert.AreEqual(0, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
+
+    [TestMethod]
+    public void Multiply_Two_Positve_Whole_Numbers()
+    {
+        var result = SimpleCalculatorLogic.SimpleCalculator.MultiplyNumbers(2.1, 1.1);
+        Assert.AreEqual(2.31, result);
+        Assert.IsInstanceOfType(result, typeof(double));
+    }
 }
