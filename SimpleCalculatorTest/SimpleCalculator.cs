@@ -97,51 +97,51 @@ public class SimpleCalculator
     //.....................................................................................
 
     [TestMethod]
-    public void Subtract_Two_Positive_Whole_Number_Correctly_And_Return_A_Double()
+    public void Subtract_Two_Positive_Whole_Number_Correctly_And_Return_A_Positive_Double()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(13, 12);
-        Assert.AreEqual(25, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(13, 12);
+        Assert.AreEqual(1, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
     [TestMethod]
-    public void Subtract_One_Number_And_Variable_To_Get_An_Positive_Number_Since_Variable_Defaults_To_Zero()
+    public void Subtract_One_Number_And_Variable_To_Get_An_Negative_Number_Since_Variable_Defaults_To_Zero()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(ed, 32);
-        Assert.AreEqual(32, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(ed, 32);
+        Assert.AreEqual(-32, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
     [TestMethod]
-    public void Subtract_Two_Negative_Whole_Numbers_Correctly_And_Return_A_Double()
+    public void Subtract_Two_Negative_Whole_Numbers_Correctly_And_Return_A_Negative_Nubmber()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(-22, -2);
-        Assert.AreEqual(-24, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(-22, -2);
+        Assert.AreEqual(-20, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
     [TestMethod]
-    public void Subtract_One_Positive_And_Negative_Correctly_And_Return_A_Double()
+    public void Subtract_One_Positive_And_Negative_Correctly_And_Return_A_Positive_Double()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(22, -452);
-        Assert.AreEqual(-430, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(22, -452);
+        Assert.AreEqual(474, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
     [TestMethod]
-    public void Subtract_One_Positive_Double_And__Positive_Whole_Number_Correctly_And_Return_A_Double()
+    public void Subtract_One_Positive_Decimal_And_Positive_Whole_Number_Correctly_And_Return_A_Negative()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(2.4, 20);
-        Assert.AreEqual(22.4, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(2.4, 20);
+        Assert.AreEqual(-17.6, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
 
     [TestMethod]
-    public void Subtract_One_Positive_Double_And_Negative_Whole_Number_Correctly_And_Return_A_Double()
+    public void Subtract_One_Positive_Decimal_And_Negative_Whole_Number_Correctly_And_Return_A_Double()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(5.5, -30);
-        Assert.AreEqual(-24.5, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(5.5, -30);
+        Assert.AreEqual(35.5, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
@@ -149,33 +149,33 @@ public class SimpleCalculator
     [TestMethod]
     public void Subtract_Two_Zero_Numbers_And_Return_A_Zero()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(0, 0);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(0, 0);
         Assert.AreEqual(0, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
 
     [TestMethod]
-    public void Subtract_Two_Negative_Decimal_Numbers_Correctly_And_Return_Negative()
+    public void Subtract_Two_Negative_Decimal_Numbers_Correctly_And_Return_Positive()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(-2.2, -4.2);
-        Assert.AreEqual(-6.4, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(-2.2, -4.2);
+        Assert.AreEqual(2.0, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
     [TestMethod]
-    public void Subtract_One_Positive_And_Zero_Correctly_And_Return_A_Double()
+    public void Subtract_One_Positive_And_Zero_Correctly_And_Return_A_Negative_Double()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(0, 5);
-        Assert.AreEqual(5, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(0, 5);
+        Assert.AreEqual(-5, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 
     [TestMethod]
-    public void Subtract_Positve_2_Point_1()
+    public void Subtract_Two_Positve_Whole_Numbers()
     {
-        var result = SimpleCalculatorLogic.SimpleCalculator.AddNumbers(2.1, 1.1);
-        Assert.AreEqual(3.2, result);
+        var result = SimpleCalculatorLogic.SimpleCalculator.SubstractNumbers(2.1, 1.1);
+        Assert.AreEqual(1.0, result);
         Assert.IsInstanceOfType(result, typeof(double));
     }
 }
